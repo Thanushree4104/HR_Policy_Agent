@@ -1,0 +1,315 @@
+IMPORTANT NOTICE
+This document is synthetic content created for testing and development of an HR policy retrieval and question-answering project. It does not represent the actual policies of MAYA or any real organization.
+
+1. PURPOSE AND SCOPE
+This fictional handbook provides policies for employees, interns, associates, directors, managers, and HR administrators. It covers attendance, leave, remote work, conduct, performance, confidentiality, information security, reimbursements, onboarding, internships, communication, grievances, and separation.
+
+2. WORKING HOURS AND ATTENDANCE
+2.1 Standard Working Hours
+The standard schedule is Monday to Friday, 9:30 AM to 6:30 PM. Core collaboration hours are 10:00 AM to 5:00 PM.
+
+2.2 Attendance
+Team members are expected to attend scheduled meetings, complete assigned work within agreed timelines, and communicate proactively when unavailable.
+
+2.3 Late Arrival
+If a team member expects to arrive more than 30 minutes late, they should inform their reporting manager or team lead as early as possible.
+
+2.4 Absence
+Unexpected absence should be communicated at the earliest practical opportunity. Planned absence should normally be communicated in advance.
+
+2.5 Mandatory Meetings
+Meetings designated as mandatory by the organization or department require attendance unless a prior exception has been approved.
+
+3. LEAVE POLICY
+3.1 Annual Leave
+Full-time employees are eligible for 18 days of paid annual leave per calendar year.
+
+3.2 Sick Leave
+Employees may take up to 12 days of sick leave per calendar year. Supporting documentation may be requested for extended absence.
+
+3.3 Leave Requests
+Planned leave should normally be submitted at least 3 working days in advance. Approval depends on team requirements and workload.
+
+3.4 Emergency Leave
+Emergency leave may be requested when advance notice is not reasonably possible. The employee should notify their manager as soon as possible.
+
+3.5 Intern Leave
+Intern leave arrangements are determined by the internship agreement and department. Interns should inform their supervisor before planned leave.
+
+4. REMOTE AND HYBRID WORK
+Remote or hybrid work may be permitted based on role requirements, team needs, and manager approval. Remote employees must remain reachable through approved communication channels during agreed working hours and attend scheduled meetings.
+
+5. CODE OF CONDUCT
+5.1 Professional Behaviour
+All team members must communicate respectfully and behave professionally with colleagues, managers, partners, clients, and stakeholders.
+
+5.2 Harassment
+Harassment, intimidation, bullying, discrimination, and retaliation are not permitted in the workplace or in work-related interactions.
+
+5.3 Conflict of Interest
+Team members must disclose situations where personal interests could reasonably conflict with their responsibilities.
+
+5.4 Gifts
+Employees should not accept gifts, payments, or benefits that could improperly influence professional decisions.
+
+6. EQUAL OPPORTUNITY AND INCLUSION
+MAYA is committed to a respectful and inclusive workplace. Employment decisions should be based on relevant qualifications, performance, role requirements, and organizational needs. Discrimination or unfair treatment based on protected characteristics is prohibited.
+
+7. PERFORMANCE MANAGEMENT
+7.1 Performance Reviews
+Employees may receive periodic performance reviews based on their role and engagement period.
+
+7.2 Review Areas
+Reviews may consider quality of work, reliability, communication, collaboration, initiative, role-specific skills, and adherence to deadlines.
+
+7.3 Feedback
+Managers are encouraged to provide constructive feedback throughout the engagement.
+
+7.4 Performance Improvement
+Where performance does not meet expectations, a manager may establish improvement goals, timelines, and support measures.
+
+8. INTERNS AND ASSOCIATES
+8.1 Internship
+Interns are expected to follow assigned schedules, complete agreed responsibilities, attend required meetings, and communicate with supervisors.
+
+8.2 Internship Completion
+At the end of an internship, MAYA may issue a Certificate of Completion based on the individual's engagement and completion of the agreed period.
+
+8.3 Associate Engagement
+Associates may be engaged for specific responsibilities or projects. Duties, duration, and reporting structure are determined by engagement terms.
+
+8.4 Certificates
+Completion or experience certificates should accurately state the person's role, engagement period, and relevant contributions.
+
+9. CONFIDENTIALITY
+Confidential information includes non-public organizational information, internal documents, personal information, project materials, credentials, research materials, and information received from clients or partners under confidentiality obligations.
+
+Confidential information must only be accessed, stored, shared, or disclosed for authorized purposes. Team members must not disclose confidential information to unauthorized individuals during or after their engagement.
+
+Upon completion or termination of engagement, team members must return or securely delete organizational information when instructed.
+
+10. INFORMATION SECURITY
+10.1 Passwords
+Passwords must be unique and must not be shared.
+
+10.2 Access
+System access should be limited to resources required for the person's role.
+
+10.3 Phishing
+Suspicious emails, links, attachments, or login requests should be reported to the designated security or IT contact.
+
+10.4 Devices
+Approved devices should be used and protected with reasonable security controls such as screen locking and software updates.
+
+10.5 Data Sharing
+Sensitive organizational information must not be uploaded to unauthorized third-party platforms or AI tools.
+
+11. USE OF AI TOOLS
+11.1 Approved Use
+AI tools may be used for brainstorming, drafting, summarization, research assistance, and other approved productivity activities.
+
+11.2 Confidential Data
+Confidential, personal, client, employee, or proprietary information must not be entered into public AI tools unless the tool and use case have been explicitly approved.
+
+11.3 Verification
+AI-generated information must be reviewed by the user before external sharing or consequential use.
+
+11.4 Responsibility
+Users remain responsible for the accuracy, appropriateness, and confidentiality of work produced with AI assistance.
+
+12. COMMUNICATION POLICY
+Work-related communication should use approved organizational email, messaging platforms, project management tools, or designated channels. Messages should be clear, respectful, and appropriate for a professional environment. Important work communications should be acknowledged within a reasonable period during working hours. External statements made on behalf of MAYA require appropriate authorization.
+
+13. REIMBURSEMENTS AND EXPENSES
+13.1 Eligibility
+Reasonable business expenses incurred for approved organizational activities may be eligible for reimbursement.
+
+13.2 Prior Approval
+Expenses above INR 5,000 generally require prior approval from the relevant manager.
+
+13.3 Documentation
+Requests should include date, purpose, amount, and supporting receipts or documentation.
+
+13.4 Submission
+Expense claims should normally be submitted within 15 calendar days of the expense.
+
+14. ONBOARDING AND OFFBOARDING
+New team members may receive an introduction to their role, reporting structure, communication channels, policies, and required tools. System access should be provided according to role requirements.
+
+At the end of an engagement, the team member may be required to return equipment, transfer work, revoke access, and return organizational information. HR may issue completion, experience, appointment, extension, or recommendation documents where appropriate.
+
+15. EXTENSION OF ENGAGEMENT
+An internship, associate engagement, or other temporary engagement may be extended based on organizational requirements and mutual agreement. An extension must be confirmed in writing by an authorized person before the extended period begins. An extension letter should specify the revised engagement period and any changes to the terms.
+
+16. GRIEVANCE AND CONCERNS
+Team members may raise workplace concerns with their reporting manager, HR representative, or designated organizational contact. Concerns should be handled sensitively and shared only with people who need the information to address the matter. Retaliation against a person who raises a concern in good faith is not permitted.
+
+17. SEPARATION
+Employees and associates should provide notice according to their applicable engagement or employment terms. Before departure, team members are expected to complete reasonable handover activities and transfer relevant work materials. Relevant completion or experience documentation may be provided after required separation procedures are completed.
+
+18. POLICY ADMINISTRATION
+HR or the designated policy owner is responsible for maintaining this handbook and communicating approved changes. Questions about interpretation or application should be directed to the relevant manager or HR representative.
+
+This synthetic handbook is solely a test corpus for an HR Policy RAG project. All policies, numbers, dates, procedures, and organizational details are fictional.
+
+Library
+/
+synthetic_maya_hr_policy.txt
+MAYA HR POLICY HANDBOOK
+Synthetic Dataset for RAG / HR Policy Testing
+Version: 1.0
+Effective Date: 1 January 2026
+
+IMPORTANT NOTICE
+This document is synthetic content created for testing and development of an HR policy retrieval and question-answering project. It does not represent the actual policies of MAYA or any real organization.
+
+1. PURPOSE AND SCOPE
+This fictional handbook provides policies for employees, interns, associates, directors, managers, and HR administrators. It covers attendance, leave, remote work, conduct, performance, confidentiality, information security, reimbursements, onboarding, internships, communication, grievances, and separation.
+
+2. WORKING HOURS AND ATTENDANCE
+2.1 Standard Working Hours
+The standard schedule is Monday to Friday, 9:30 AM to 6:30 PM. Core collaboration hours are 10:00 AM to 5:00 PM.
+
+2.2 Attendance
+Team members are expected to attend scheduled meetings, complete assigned work within agreed timelines, and communicate proactively when unavailable.
+
+2.3 Late Arrival
+If a team member expects to arrive more than 30 minutes late, they should inform their reporting manager or team lead as early as possible.
+
+2.4 Absence
+Unexpected absence should be communicated at the earliest practical opportunity. Planned absence should normally be communicated in advance.
+
+2.5 Mandatory Meetings
+Meetings designated as mandatory by the organization or department require attendance unless a prior exception has been approved.
+
+3. LEAVE POLICY
+3.1 Annual Leave
+Full-time employees are eligible for 18 days of paid annual leave per calendar year.
+
+3.2 Sick Leave
+Employees may take up to 12 days of sick leave per calendar year. Supporting documentation may be requested for extended absence.
+
+3.3 Leave Requests
+Planned leave should normally be submitted at least 3 working days in advance. Approval depends on team requirements and workload.
+
+3.4 Emergency Leave
+Emergency leave may be requested when advance notice is not reasonably possible. The employee should notify their manager as soon as possible.
+
+3.5 Intern Leave
+Intern leave arrangements are determined by the internship agreement and department. Interns should inform their supervisor before planned leave.
+
+4. REMOTE AND HYBRID WORK
+Remote or hybrid work may be permitted based on role requirements, team needs, and manager approval. Remote employees must remain reachable through approved communication channels during agreed working hours and attend scheduled meetings.
+
+5. CODE OF CONDUCT
+5.1 Professional Behaviour
+All team members must communicate respectfully and behave professionally with colleagues, managers, partners, clients, and stakeholders.
+
+5.2 Harassment
+Harassment, intimidation, bullying, discrimination, and retaliation are not permitted in the workplace or in work-related interactions.
+
+5.3 Conflict of Interest
+Team members must disclose situations where personal interests could reasonably conflict with their responsibilities.
+
+5.4 Gifts
+Employees should not accept gifts, payments, or benefits that could improperly influence professional decisions.
+
+6. EQUAL OPPORTUNITY AND INCLUSION
+MAYA is committed to a respectful and inclusive workplace. Employment decisions should be based on relevant qualifications, performance, role requirements, and organizational needs. Discrimination or unfair treatment based on protected characteristics is prohibited.
+
+7. PERFORMANCE MANAGEMENT
+7.1 Performance Reviews
+Employees may receive periodic performance reviews based on their role and engagement period.
+
+7.2 Review Areas
+Reviews may consider quality of work, reliability, communication, collaboration, initiative, role-specific skills, and adherence to deadlines.
+
+7.3 Feedback
+Managers are encouraged to provide constructive feedback throughout the engagement.
+
+7.4 Performance Improvement
+Where performance does not meet expectations, a manager may establish improvement goals, timelines, and support measures.
+
+8. INTERNS AND ASSOCIATES
+8.1 Internship
+Interns are expected to follow assigned schedules, complete agreed responsibilities, attend required meetings, and communicate with supervisors.
+
+8.2 Internship Completion
+At the end of an internship, MAYA may issue a Certificate of Completion based on the individual's engagement and completion of the agreed period.
+
+8.3 Associate Engagement
+Associates may be engaged for specific responsibilities or projects. Duties, duration, and reporting structure are determined by engagement terms.
+
+8.4 Certificates
+Completion or experience certificates should accurately state the person's role, engagement period, and relevant contributions.
+
+9. CONFIDENTIALITY
+Confidential information includes non-public organizational information, internal documents, personal information, project materials, credentials, research materials, and information received from clients or partners under confidentiality obligations.
+
+Confidential information must only be accessed, stored, shared, or disclosed for authorized purposes. Team members must not disclose confidential information to unauthorized individuals during or after their engagement.
+
+Upon completion or termination of engagement, team members must return or securely delete organizational information when instructed.
+
+10. INFORMATION SECURITY
+10.1 Passwords
+Passwords must be unique and must not be shared.
+
+10.2 Access
+System access should be limited to resources required for the person's role.
+
+10.3 Phishing
+Suspicious emails, links, attachments, or login requests should be reported to the designated security or IT contact.
+
+10.4 Devices
+Approved devices should be used and protected with reasonable security controls such as screen locking and software updates.
+
+10.5 Data Sharing
+Sensitive organizational information must not be uploaded to unauthorized third-party platforms or AI tools.
+
+11. USE OF AI TOOLS
+11.1 Approved Use
+AI tools may be used for brainstorming, drafting, summarization, research assistance, and other approved productivity activities.
+
+11.2 Confidential Data
+Confidential, personal, client, employee, or proprietary information must not be entered into public AI tools unless the tool and use case have been explicitly approved.
+
+11.3 Verification
+AI-generated information must be reviewed by the user before external sharing or consequential use.
+
+11.4 Responsibility
+Users remain responsible for the accuracy, appropriateness, and confidentiality of work produced with AI assistance.
+
+12. COMMUNICATION POLICY
+Work-related communication should use approved organizational email, messaging platforms, project management tools, or designated channels. Messages should be clear, respectful, and appropriate for a professional environment. Important work communications should be acknowledged within a reasonable period during working hours. External statements made on behalf of MAYA require appropriate authorization.
+
+13. REIMBURSEMENTS AND EXPENSES
+13.1 Eligibility
+Reasonable business expenses incurred for approved organizational activities may be eligible for reimbursement.
+
+13.2 Prior Approval
+Expenses above INR 5,000 generally require prior approval from the relevant manager.
+
+13.3 Documentation
+Requests should include date, purpose, amount, and supporting receipts or documentation.
+
+13.4 Submission
+Expense claims should normally be submitted within 15 calendar days of the expense.
+
+14. ONBOARDING AND OFFBOARDING
+New team members may receive an introduction to their role, reporting structure, communication channels, policies, and required tools. System access should be provided according to role requirements.
+
+At the end of an engagement, the team member may be required to return equipment, transfer work, revoke access, and return organizational information. HR may issue completion, experience, appointment, extension, or recommendation documents where appropriate.
+
+15. EXTENSION OF ENGAGEMENT
+An internship, associate engagement, or other temporary engagement may be extended based on organizational requirements and mutual agreement. An extension must be confirmed in writing by an authorized person before the extended period begins. An extension letter should specify the revised engagement period and any changes to the terms.
+
+16. GRIEVANCE AND CONCERNS
+Team members may raise workplace concerns with their reporting manager, HR representative, or designated organizational contact. Concerns should be handled sensitively and shared only with people who need the information to address the matter. Retaliation against a person who raises a concern in good faith is not permitted.
+
+17. SEPARATION
+Employees and associates should provide notice according to their applicable engagement or employment terms. Before departure, team members are expected to complete reasonable handover activities and transfer relevant work materials. Relevant completion or experience documentation may be provided after required separation procedures are completed.
+
+18. POLICY ADMINISTRATION
+HR or the designated policy owner is responsible for maintaining this handbook and communicating approved changes. Questions about interpretation or application should be directed to the relevant manager or HR representative.
+
+This synthetic handbook is solely a test corpus for an HR Policy RAG project. All policies, numbers, dates, procedures, and organizational details are fictional.
