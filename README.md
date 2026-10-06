@@ -1,50 +1,71 @@
-# Nexolve Resolution Copilot
+<!-- ============================================================
+NEXOLVE RESOLUTION COPILOT — README
+Editorial redesign: no emoji, muted palette, depth on demand
+============================================================ -->
 
-<p align="center">
-  <img src="docs/assets/nexolve-banner.svg" alt="Nexolve Resolution Copilot - from complaint to confident next step" width="100%" />
-</p>
+<div align="center">
 
-<p align="center">
-  <img alt="API" src="https://img.shields.io/badge/API-FastAPI-079A82?style=flat-square" />
-  <img alt="Frontend" src="https://img.shields.io/badge/UI-React%20%2B%20Vite-5B67E8?style=flat-square" />
-  <img alt="Retrieval" src="https://img.shields.io/badge/Retrieval-Semantic%20%2B%20BM25-6941C6?style=flat-square" />
-  <img alt="Answers" src="https://img.shields.io/badge/Answers-Cited%20%26%20Grounded-CC8A25?style=flat-square" />
-</p>
+<img src="docs/assets/nexolve-banner.svg" alt="Nexolve Resolution Copilot" width="100%" />
 
+<br/>
 
-<p align="center">
-  <strong>Turn a customer complaint into evidence-backed support guidance.</strong><br/>
-  A semantic support assistant for telecom service teams.
-</p>
+[![API — FastAPI](https://img.shields.io/badge/FastAPI-0B0F14?style=flat-square&logo=fastapi&logoColor=white&labelColor=2A333D)]()
+[![UI — React + Vite](https://img.shields.io/badge/React%20%2B%20Vite-0B0F14?style=flat-square&logo=react&logoColor=white&labelColor=2A333D)]()
+[![Retrieval](https://img.shields.io/badge/Semantic%20%2B%20BM25-0B0F14?style=flat-square&labelColor=2A333D)]()
+[![Answers](https://img.shields.io/badge/Cited%20%26%20Grounded-0B0F14?style=flat-square&labelColor=2A333D)]()
 
-<p align="center">
-  <em>Understand the issue · Find relevant history · Draft a grounded next step</em>
-</p>
+<br/>
+
+### From complaint to confident next step.
+
+**A semantic support assistant for telecom service teams**
+
+*Understand the issue · Find relevant history · Draft a grounded next step*
+
+</div>
 
 ---
 
-## Why this project exists
+## Overview
 
-<table width="100%" border="0" cellpadding="16" cellspacing="0"><tbody><tr><td bgcolor="#F0F3FF">
-<p>Support agents often search old cases with a few keywords. That works when customers use the same words as the ticket title; it misses when they describe the same fault differently.</p>
-<p>A customer might say, “My broadband drops every evening while I’m working.” A useful assistant should recognize the connectivity problem, retrieve relevant support articles and resolved cases, and help the agent respond with clear steps grounded in those sources.</p>
-<p>Nexolve Resolution Copilot is designed to make that workflow faster while keeping the evidence visible. It is an assistant for support staff: retrieved sources inform the recommendation, and the agent remains responsible for reviewing it.</p>
-</td></tr></tbody></table>
+|  |  |
+| :--- | :--- |
+| **Purpose** | Move support agents from a customer complaint to a cited, reviewable next step |
+| **Method** | Hybrid retrieval (semantic + BM25) → grounded LLM drafting → citation validation |
+| **Safety** | Telecom scope guard · evidence thresholds · safe abstention when evidence is thin |
+| **Retrieval** | Recall@1 **56.8%** · Recall@5 **84.3%** · nDCG@5 **0.715** <sub>*synthetic benchmark*</sub> |
 
-## What it does
+## Quick start
 
-- Accepts a free-text customer complaint in a web interface.
-- Extracts useful complaint signals such as product, issue category, severity, and sentiment.
-- Searches support knowledge and historical resolved tickets using semantic and lexical retrieval.
-- Uses query-aware feedback signals to adjust rankings for similar future complaints.
-- Drafts a step-by-step response from retrieved evidence.
-- Returns visible source references and validates citations against retrieved evidence.
-- Applies telecom scope and response guardrails, with safe handling when evidence is insufficient.
-- Captures helpfulness feedback and exposes service health and request diagnostics.
+```powershell
+# Start the API
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
 
-## Architecture
+```powershell
+# Start the UI (from /frontend)
+npm install
+npm run dev -- --port 5174
+```
 
-The diagram shows the intended request and feedback flow. It intentionally omits dataset counts.
+Point the frontend at the local API and configure LLM credentials via the project's environment files. Never commit secrets.
+
+<details>
+<summary>&nbsp;Pre-production implementation check</summary>
+
+<br/>
+
+- [ ] Telecom scope guard runs before retrieval
+- [ ] Frontend feedback payload matches the API feedback schema
+- [ ] Out-of-scope complaint returns no irrelevant sources
+- [ ] In-scope complaint shows source metadata and validated citations
+- [ ] Helpfulness feedback is accepted end-to-end
+
+</details>
+
+---
+
+## How it works
 
 ```mermaid
 flowchart TB
@@ -95,122 +116,142 @@ flowchart TB
     class SCOPE,SAFE,VALIDATE safety;
 ```
 
-### Request lifecycle
+**Request lifecycle**
 
-1. The customer complaint enters through the web application.
-2. The API checks whether the issue is in the supported telecom domain.
-3. For an in-scope complaint, the retrieval layer searches support articles and eligible resolved cases using semantic and BM25 signals.
-4. Feedback from similar queries can influence ranking. Retrieved evidence is assembled as the only factual basis for the generated recommendation.
-5. The answer is checked for valid source citations and safe output before it is returned.
-6. The UI presents the resolution and its knowledge sources; the customer or agent can rate whether it helped.
-
-## Grounding and safety
-
-<p>The assistant should prefer a useful abstention over a confident answer without evidence.</p>
-
-- **Source-grounded generation:** recommendations should be based on retrieved material, not invented telecom procedures.
-- **Citation validation:** source identifiers in the answer must correspond to sources actually retrieved for that request.
-- **Evidence threshold:** if retrieval does not find sufficiently relevant material, the response should explain the evidence gap and avoid specific unsupported troubleshooting.
-- **Domain scope:** non-telecom complaints should be routed to a safe out-of-scope response without presenting unrelated telecom articles as relevant.
-- **Ticket hygiene:** exclude unsuitable historical cases and remove personal information before indexing or using ticket text.
-- **Human review:** agents should verify actions that affect accounts, billing, equipment, or service status.
-
-## Additional exploration
-
-The system is designed to evolve as customer language, products, and ticket classes change.
-
-### Retrieval experiments
-
-Compare lexical BM25, semantic similarity, and hybrid retrieval on the same labeled complaint set. Include paraphrases, spelling mistakes, short complaints, and complaints with multiple symptoms. Track which source type—article or historical case—provides the strongest evidence.
-
-### Feedback-aware ranking
-
-Use helpful and not-helpful feedback as a ranking signal for semantically similar future queries. Keep this signal bounded: feedback should adjust candidate ordering, not override relevance, source quality, domain scope, or safety rules. Log the ranking version so experiments can be compared and rolled back.
-
-### Evolving taxonomy and data
-
-Monitor new product names, issue categories, and emerging ticket clusters. Add a controlled ingestion path that validates records, redacts sensitive fields, deduplicates cases, and refreshes indexes. Version the corpus and taxonomy so results can be traced to the data that produced them.
-
-### Out-of-domain and low-evidence behavior
-
-Include deliberate negative examples—such as vehicle repair, medical, or unrelated consumer questions—in evaluation. The expected behavior is to decline domain-specific guidance and avoid displaying unrelated retrieved sources as supporting evidence.
-
-## Evaluation: quality and system health
-
-<p align="center">
-  <img src="docs/assets/evaluation-scorecard.svg" alt="Offline synthetic evaluation summary" width="100%" />
-</p>
-
-
-<p>The figures below are taken from the evaluation artifacts in your project folder (data/eval/retrieval_results.json and data/eval/answer_results.jsonl). The retrieval results are a measured run of the project hybrid retriever on its synthetic labeled benchmark; they are not production traffic metrics.</p>
-
-| Area | What to measure | Observed project result | Why it matters |
-|---|---|---|---|
-| Retrieval relevance | Recall@k, MRR, nDCG | **400 synthetic complaint queries:** Recall@1 **56.8%**, Recall@3 **77.0%**, Recall@5 **84.3%**; MRR **0.672**, nDCG@5 **0.715** | Relevant knowledge articles appear near the top |
-| Retrieval latency | p50 / p95 retrieval time | **46.2 ms / 91.1 ms** across the recorded offline run; max **226.3 ms** | Indicates local retrieval cost only; not end-to-end service latency |
-| Answer generation | Successful answer runs | **1 of 5 (20%)**; **4 of 5** failed with provider rate limits | The sample is too small and rate-limited to claim reliable generation |
-| Citation validation | Citation presence and retrieved-ID validity | **1 of 1 generated answer (100%)** had a citation and all cited IDs were retrieved; this checks ID validity, not whether the cited source truly supports every claim | Generated steps need to point to real retrieved evidence |
-
-## Production scale considerations
-
-### Retrieval and data
-
-- Move from in-process indexes to a managed vector store or search service when corpus size, concurrency, or update frequency requires it; retain lexical retrieval for exact product codes and known terms.
-- Use approximate nearest-neighbor search, metadata filters, and bounded candidate sets to control latency.
-- Ingest changes asynchronously. Validate, redact, deduplicate, and version documents before publishing a new index.
-- Keep ticket and knowledge-article permissions and retention rules separate where required.
-- Support index rebuilds and rollback to a known-good corpus snapshot.
-
-### Service reliability
-
-- Keep the API stateless and scale it horizontally behind a load balancer.
-- Put LLM calls behind timeouts, bounded retries, rate limits, and circuit breakers. Return a clear evidence-based fallback if the provider is unavailable.
-- Cache safe, repeatable retrieval work where appropriate; do not cache responses containing customer-specific data without a reviewed privacy design.
-- Add request IDs, structured logs, distributed traces, and metrics while avoiding complaint text and personal data in logs.
-- Protect endpoints with authentication, authorization, input-size limits, abuse controls, and secrets management.
-
-### Model and feedback governance
-
-- Pin and record embedding, reranker, prompt, and generation model versions.
-- Treat feedback as untrusted input; rate-limit it, deduplicate it, and monitor for manipulation or drift.
-- Use offline evaluation and staged rollout before a ranking or model change reaches all agents.
-- Track source freshness and answer quality together; a fluent answer over stale evidence is still a failure.
-
-## Technology
-
-- **Web UI:** React and Vite
-- **API:** Python and FastAPI
-- **Retrieval:** Sentence Transformers embeddings and BM25 lexical search
-- **Generation:** configured LLM provider (Groq in the reviewed setup)
-- **Operations:** health endpoint, structured request logs, and evaluation-driven monitoring
-
-Confirm exact dependency versions and provider configuration in the project’s environment files before deployment.
-
-## Run locally
-
-Use the project’s existing environment and instructions as the source of truth for dependencies and environment variables.
-
-Typical development commands:
-
-```powershell
-# From the project root: start the API
-uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-```
-
-```powershell
-# From the frontend directory: install dependencies once, then start the UI
-npm install
-npm run dev -- --port 5174
-```
-
-Configure the frontend API URL to point to the local API, and configure the backend’s LLM credentials using the project’s environment settings. Never commit secrets. If your project scripts use different paths or commands, follow those instead.
-
-## Current implementation check
-
-<p>Before describing the full workflow as production-active, verify that the telecom scope guard is called before retrieval and that the frontend feedback payload matches the API feedback schema. Run the API and UI together, then confirm that an out-of-scope complaint returns no irrelevant sources, an in-scope complaint shows both source metadata and citations, and helpfulness feedback is accepted.</p>
+1. Complaint enters via the web application
+2. API checks whether the issue is in the supported telecom domain
+3. For in-scope complaints, the retrieval layer searches support articles and eligible resolved cases using semantic and BM25 signals; feedback from similar queries can adjust ranking
+4. Retrieved evidence is assembled as the only factual basis for the generated recommendation
+5. The answer is checked for valid source citations and safe output before it is returned
+6. The UI presents the resolution and its sources; the agent or customer rates whether it helped
 
 ---
 
-<p align="center">
-  <sub>Evidence first. Clear next steps. Better support conversations.</sub>
-</p>
+## Why this project exists
+
+> Support agents often search old cases with a few keywords. That works when customers use the same words as the ticket title; it misses when they describe the same fault differently.
+> >
+> A customer might say, *"My broadband drops every evening while I'm working."* A useful assistant should recognize the connectivity problem, retrieve relevant support articles and resolved cases, and help the agent respond with clear steps grounded in those sources.
+> >
+> Nexolve makes that workflow faster while keeping the evidence visible. Retrieved sources inform the recommendation — the agent remains responsible for reviewing it.
+
+<details>
+<summary>&nbsp;Capabilities</summary>
+
+<br/>
+
+- Accepts a free-text customer complaint in a web interface
+- Extracts complaint signals: product, issue category, severity, sentiment
+- Searches support knowledge and historical resolved tickets with semantic and lexical retrieval
+- Uses query-aware feedback signals to adjust rankings for similar future complaints
+- Drafts a step-by-step response from retrieved evidence
+- Returns visible source references; validates citations against retrieved evidence
+- Applies telecom scope and response guardrails, with safe handling when evidence is insufficient
+- Captures helpfulness feedback; exposes service health and request diagnostics
+
+</details>
+
+---
+
+## Grounding and safety
+
+The assistant prefers a useful abstention over a confident answer without evidence.
+
+| Principle | What it means |
+| :--- | :--- |
+| Source-grounded generation | Recommendations are based on retrieved material, not invented telecom procedures |
+| Citation validation | Source identifiers in the answer must correspond to sources actually retrieved for that request |
+| Evidence threshold | If retrieval does not find sufficiently relevant material, the response explains the evidence gap and avoids unsupported troubleshooting |
+| Domain scope | Non-telecom complaints receive a safe out-of-scope response, without unrelated telecom articles presented as relevant |
+| Ticket hygiene | Unsuitable historical cases are excluded and personal information is redacted before indexing or use |
+| Human review | Agents verify actions that affect accounts, billing, equipment, or service status |
+
+---
+
+## Evaluation
+
+> [!IMPORTANT]
+> Figures are from the offline synthetic evaluation artifacts in the project folder (`data/eval/retrieval_results.json`, `data/eval/answer_results.jsonl`) — a measured run of the project hybrid retriever on its synthetic labeled benchmark. They are not production traffic metrics.
+
+| Area | Observed project result |
+| :--- | :--- |
+| Retrieval relevance | **400 synthetic complaint queries** — Recall@1 **56.8%**, Recall@3 **77.0%**, Recall@5 **84.3%**; MRR **0.672**, nDCG@5 **0.715** |
+| Retrieval latency | p50 **46.2 ms** / p95 **91.1 ms** across the recorded offline run; max **226.3 ms** — local retrieval cost only, not end-to-end service latency |
+| Answer generation | **1 of 5 (20%)** successful runs; **4 of 5** failed with provider rate limits — sample too small and rate-limited to claim reliable generation |
+| Citation validation | **1 of 1 generated answers (100%)** had a citation and all cited IDs were retrieved — this checks ID validity, not whether the cited source truly supports every claim |
+
+<details>
+<summary>&nbsp;Further exploration: retrieval experiments · feedback-aware ranking · evolving taxonomy · out-of-domain behavior</summary>
+
+<br/>
+
+- **Retrieval experiments** — compare lexical BM25, semantic similarity, and hybrid retrieval on the same labeled complaint set. Include paraphrases, spelling mistakes, short complaints, and multi-symptom complaints. Track which source type — article or historical case — provides the strongest evidence.
+- **Feedback-aware ranking** — use helpful and not-helpful feedback as a ranking signal for semantically similar future queries. Bounded by design: feedback adjusts candidate ordering, never relevance, source quality, domain scope, or safety rules. Log the ranking version so experiments can be compared and rolled back.
+- **Evolving taxonomy and data** — monitor new product names, issue categories, and emerging ticket clusters. Controlled ingestion validates records, redacts sensitive fields, deduplicates cases, and refreshes indexes. Version the corpus and taxonomy so results can be traced to the data that produced them.
+- **Out-of-domain and low-evidence behavior** — include deliberate negative examples (vehicle repair, medical, unrelated consumer questions). Expected behavior: decline domain-specific guidance and avoid displaying unrelated retrieved sources as supporting evidence.
+
+</details>
+
+---
+
+## Production scale considerations
+
+<details>
+<summary>&nbsp;Retrieval and data</summary>
+
+<br/>
+
+- Move from in-process indexes to a managed vector store or search service when corpus size, concurrency, or update frequency requires it; retain lexical retrieval for exact product codes and known terms
+- Use approximate nearest-neighbor search, metadata filters, and bounded candidate sets to control latency
+- Ingest changes asynchronously; validate, redact, deduplicate, and version documents before publishing a new index
+- Keep ticket and knowledge-article permissions and retention rules separate where required
+- Support index rebuilds and rollback to a known-good corpus snapshot
+
+</details>
+
+<details>
+<summary>&nbsp;Service reliability</summary>
+
+<br/>
+
+- Keep the API stateless and scale it horizontally behind a load balancer
+- Put LLM calls behind timeouts, bounded retries, rate limits, and circuit breakers; return a clear evidence-based fallback if the provider is unavailable
+- Cache safe, repeatable retrieval work where appropriate; do not cache responses containing customer-specific data without a reviewed privacy design
+- Add request IDs, structured logs, distributed traces, and metrics while avoiding complaint text and personal data in logs
+- Protect endpoints with authentication, authorization, input-size limits, abuse controls, and secrets management
+
+</details>
+
+<details>
+<summary>&nbsp;Model and feedback governance</summary>
+
+<br/>
+
+- Pin and record embedding, reranker, prompt, and generation model versions
+- Treat feedback as untrusted input; rate-limit it, deduplicate it, and monitor for manipulation or drift
+- Use offline evaluation and staged rollout before a ranking or model change reaches all agents
+- Track source freshness and answer quality together — a fluent answer over stale evidence is still a failure
+
+</details>
+
+---
+
+## Technology
+
+| Layer | Stack |
+| :--- | :--- |
+| Web UI | React · Vite |
+| API | Python · FastAPI |
+| Retrieval | Sentence Transformers embeddings · BM25 lexical search |
+| Generation | Configured LLM provider (Groq in the reviewed setup) |
+| Operations | Health endpoint · structured request logs · evaluation-driven monitoring |
+
+Confirm exact dependency versions and provider configuration in the project's environment files before deployment.
+
+---
+
+<div align="center">
+
+<sub>Evidence first. Clear next steps. Better support conversations.</sub>
+
+</div>
